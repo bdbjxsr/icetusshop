@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from shop import views 
+from shop import views,user
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^$', views.view_index, name='view_index'),
+	url(r'^user/login$', user.login, name='user_login'),
 ]

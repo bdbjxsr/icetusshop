@@ -30,6 +30,7 @@ class DomainMiddleware(MiddlewareMixin):
 		
 		siteinfo = {}
 		siteinfo['static_base'] = '/static/%s' % (request.site.get_template())
+		siteinfo['name'] = request.site.name
 		response.context_data['siteinfo'] = siteinfo
 		
 		#logger.debug('Deal Domain Info Template Response End   ...')
